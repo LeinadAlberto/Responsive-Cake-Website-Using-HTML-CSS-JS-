@@ -46,10 +46,10 @@ const swiperHome = new Swiper('.home__swiper', {
          opacity: 0,
       },
    },
-   /* autoplay: {
+   autoplay: {
       delay: 3000, 
       disableOnInteraction: false,
-   } */
+   }
 })
 
 /*=============== CHANGE HEADER STYLES ===============*/
