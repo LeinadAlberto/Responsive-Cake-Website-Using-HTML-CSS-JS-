@@ -224,7 +224,9 @@ img {
 }
 
 /* Change header styles */
-
+.scroll-header {
+	box-shadow: 0 2px 16px hsla(350, 70%, 20%, .1);
+}
 
 /* Active link */
 
@@ -585,7 +587,51 @@ img {
 }
 
 /*=============== NEW SECTION ===============*/
+.new__container {
+	row-gap: 5rem;
+	padding-bottom: 3rem;
+}
 
+.new__data {
+	text-align: center;
+}
+
+.new__description {
+	margin-bottom: 1.5rem;
+}
+
+.new__images {
+	position: relative;
+	display: grid;
+	justify-self: center;
+}
+
+.new__titles {
+	position: absolute;
+	top: -1.5rem;
+	justify-self: center;
+}
+
+.new__text {
+	font-size: 3.5rem;
+	font-weight: var(--font-bold);
+	line-height: 120%;
+	opacity: .1;
+}
+
+.new__cake {
+	width: 220px;
+	margin: auto;
+	transition: filter .4s;
+}
+
+.new__name {
+	text-align: center;
+	font-size: var(--h1-font-size);
+	padding-block: 1rem;
+	/* opacity: 0;
+	transition: opacity .4s; */
+}
 
 /* Swiper class */
 
