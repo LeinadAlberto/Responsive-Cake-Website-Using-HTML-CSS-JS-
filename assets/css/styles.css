@@ -731,7 +731,8 @@ img {
 /* For medium devices <> */
 @media (width >= 540px) {
 	.home__container, 
-	.about__container {
+	.about__container, 
+	.new__container {
 		grid-template-columns: 400px;
 		justify-content: center;
 	}
@@ -982,6 +983,57 @@ img {
 		top: 1.5rem;
 		right: 1.5rem;
 	}
+
+	.new__container {
+		grid-template-columns: 400px 640px;
+		column-gap: 5rem;
+		align-items: center;
+		padding-block: 3rem 4rem;
+	}
+
+	.new__data .section__title, 
+	.new__data {
+		text-align: initial;
+	}
+
+	.new__description {
+		margin-bottom: 4rem;
+	}
+
+	.new__text {
+		font-size: 6rem;
+	}
+
+	.new__titles {
+		top: -.5rem;
+	}
+
+	.new__cake {
+		width: 420px;
+	}
+
+	.new__name {
+		padding-block: 2rem 3rem;
+	}
+
+	.new__leaf-1 {
+		width: 90px;
+		right: 4rem;
+	}
+
+	.new__leaf-2 {
+		width: 90px;
+		left: 5rem;
+		bottom: 9rem;
+	}
+
+	.new__leaf-3 {
+		width: 130px;
+		top: -4rem;
+		left: 4rem;
+	}
+
+
 }
 
 /* For 2K resolutions <> */
