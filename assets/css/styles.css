@@ -229,7 +229,9 @@ img {
 }
 
 /* Active link */
-
+.active-link {
+	color: var(--first-color);
+}
 
 /*=============== HOME SECTION ===============*/
 .home__container {
@@ -382,7 +384,7 @@ img {
 	padding-bottom: 2.5rem;
 }
 
-.about-cupcake-1 {
+.about__cupcake-1 {
 	position: absolute;
 	width: 80px;
 	top: -1.5rem;
@@ -390,7 +392,7 @@ img {
 	rotate: -135deg;
 }
 
-.about-cupcake-2 {
+.about__cupcake-2 {
 	position: absolute;
 	width: 80px;
 	left: -1.5rem;
@@ -848,18 +850,56 @@ img {
 	position: absolute;
 	width: 100%;
 	bottom: -1rem;
-	justify-self: center;
+	/* Considerar este tipo de centrado en imagenes SVG */
+	left: 50%;
+	transform: translateX(-50%);
+	
 	z-index: -1;
 }
 
-/*=============== SCROLL BAR ===============*/
+.footer__link,
+.footer__link:visited {
+	color: var(--first-color);
+}
 
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+	width: .6rem;
+	background-color: hsl(350, 40%, 75%);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: hsl(350, 40%, 65%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: hsl(350, 40%, 55%);
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+	position: fixed;
+	right: 1rem;
+	bottom: -50%;
+	background-color: var(--body-color);
+	box-shadow: 0 4px 16px hsla(350, 70%, 20%, .2);
+	color: var(--title-color);
+	display: inline-flex;
+	padding: 6px;
+	font-size: 1.25rem;
+	border-radius: .75rem;
+	z-index: var(--z-tooltip);
+	transition: bottom .4s, transform .4s;
+}
 
+.scrollup:hover {
+	transform: translateY(-.5rem);
+}
 
 /* Show Scroll Up */
-
+.show-scroll {
+	bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices <> */
@@ -890,7 +930,7 @@ img {
 	}
 
 	.footer__blob {
-		width: 80%;
+		width: 500px;
 	}
 }
 
@@ -1022,13 +1062,13 @@ img {
 		top: 10rem;
 	}
 
-	.about-cupcake-1 {
+	.about__cupcake-1 {
 		width: 150px;
 		right: -2.5rem;
 		top: -2.5rem;
 	}
 
-	.about-cupcake-2 {
+	.about__cupcake-2 {
 		width: 150px;
 		left: -2.5rem;
 		bottom: -2.5rem;
@@ -1283,9 +1323,14 @@ img {
 		bottom: -4rem;
 	}
 
-
-
-
+	.scrollup {
+		right: 3rem;
+	}
 }
 
 /* For 2K resolutions <> */
+@media (width >= 2048px) {
+	body {
+		zoom: 120%;
+	}
+}
